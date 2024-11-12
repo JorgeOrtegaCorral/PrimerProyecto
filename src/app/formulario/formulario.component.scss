@@ -1,0 +1,51 @@
+form {
+  width: 90%;
+  max-width: 400px;
+  margin: 30px auto 20px;
+
+  div {
+    width: 100%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 0 auto 5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 4px 3px 4px 6px;
+      border-radius: 10px;
+      outline: none;
+      border: 1px solid #242424;
+    }
+
+    &.button-form {
+      button {
+        display: block;
+        margin: 0 0 0 auto;
+
+        border-radius: 7px;
+        outline: none;
+        border: 1px solid #242424; /* casi negro */
+        background-color: transparent;
+        color: #000; /* #000 negro */
+        padding: 5px 15px;
+        cursor: pointer;
+        transition: .25s all;
+
+        &:hover, &:focus {
+          color: white;
+          background-color: #000;
+        }
+
+      &[disabled] {
+        opacity: 0.4;
+        }
+      }
+    }
+  }
+}

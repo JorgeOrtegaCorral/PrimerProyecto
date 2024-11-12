@@ -1,0 +1,25 @@
+.pokemon-container {
+  width: 95%;
+  margin: 0 auto 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px 25px;
+
+  div {
+    border-radius: 10px;
+    box-shadow: 0 2px 3px #262626;
+    padding: 10px 15px;
+    position: relative;
+
+    img {
+      width: 80%;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

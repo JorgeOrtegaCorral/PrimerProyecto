@@ -1,0 +1,18 @@
+<!-- POSITION FIXED -->
+<div class="padre"> <!-- ELEMENTO DEL FONDO NEGRO -->
+
+  <!-- ELEMENTO QUE TENGA EL CONTENIDO y el que
+  tendrá el width 90%; y que sea blanco.
+  La altura auto (por defecto) -->
+  <div>
+    <!--Este o el otro botón de cierre-->
+    <button class="close" type="button" (click)="cerrarModal()">X</button>
+
+    <h2>{{pokemon?.nombre}}</h2>
+    <img src="{{pokemon?.image_url}}" alt="">
+    <p>{{pokemon?.descripcion}}</p>
+
+    <button class="button-close" type="button" (click)="cerrarModal()">Cerrar</button>
+  </div>
+
+</div>
