@@ -3,6 +3,7 @@ import { Pokemon, PokemonApi } from "../services/interfaces/pokemon";
 import { InformacionService } from "../services/modales/informacion.service";
 import { EnviarPokemonService } from "../services/pokemon/enviar-pokemon.service";
 import { PokemonApiService } from "../services/pokemon/pokemon-api.service";
+import { PokemonDetailService } from "../services/pokemon/pokemon-detail.service";
 import { Router } from "@angular/router";
 
 
@@ -20,6 +21,7 @@ export class InformacionComponent implements OnInit{
     private informacionService: InformacionService,
     private enviarPokemonService: EnviarPokemonService,
     private pokemonApiService: PokemonApiService,
+    private pokemonDetailService: PokemonDetailService,
     private router: Router
   ){}
 
@@ -91,9 +93,8 @@ export class InformacionComponent implements OnInit{
   ]
 
   detallesPokemon(nombre: string) {
-    //deberemos enviar el nombre
-    //a trves de un BehaviorSubject enviar el nombre al componente pokemon-detail
-
+    //deberemos enviar el nombre a trves de un BehaviorSubject al componente pokemon-detail
+    this.pokemonDetailService.getNombre(nombre);
     this.router.navigate(['detalles']);
   }
 
