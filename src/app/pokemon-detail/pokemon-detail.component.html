@@ -1,6 +1,11 @@
 <div class = "pokemon">
   <div>
-    <img src="{{sprite}}" alt="{{nombre}}">
+    <img src="{{pokemon?.imagen}}" alt="{{nombre}}">
     <p>{{nombre}}</p>
+
+    <p class="abilities" *ngFor="let ability of pokemon?.abilities">
+      Habilidad: {{ability.name}}<br>
+      URL: {{ability.url}}
+    </p>
   </div>
 </div>
