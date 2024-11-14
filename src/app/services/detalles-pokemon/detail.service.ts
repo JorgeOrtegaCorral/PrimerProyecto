@@ -5,15 +5,15 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class PokemonApiService {
+export class DetailService {
 
-  url: string = "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0"
+  url: string = "https://pokeapi.co/api/v2/pokemon/"
 
   constructor(
     private http: HttpClient
   ) {}
 
-  getAllPokemon(): Observable<any> {
-    return this.http.get(this.url)
+  getPokemon(nombre: string): Observable<any> {
+    return this.http.get(this.url + nombre);
   }
 }
